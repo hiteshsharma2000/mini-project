@@ -14,7 +14,7 @@ const MyBooks = () => {
   const fetchMyBooks = async () => {
     const token = localStorage.getItem('token');
     try {
-    const res = await axios.get('http://localhost:5000/api/mybooks', {
+    const res = await axios.get('https://mini-project-mme9.onrender.com/api/mybooks', {
   headers: {
     Authorization:token,
     'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ setBooks(res.data)
     console.log(bookId);
     
     try {
-      let res=await axios.patch(`http://localhost:5000/api/mybooks/${bookId}/status`, { status }, {
+      let res=await axios.patch(`https://mini-project-mme9.onrender.com/api/mybooks/${bookId}/status`, { status }, {
         headers: {
           Authorization:`${token}`,
           'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ setBooks(res.data)
   const updateRating = async (bookId, rating) => {
     const token = localStorage.getItem('token');
     try {
-    let res=await axios.patch(`http://localhost:5000/api/mybooks/${bookId}/rating`, { rating }, {
+    let res=await axios.patch(`https://mini-project-mme9.onrender.com/api/mybooks/${bookId}/rating`, { rating }, {
         headers: {
           Authorization: `${token}`,
           'Content-Type': 'application/json',

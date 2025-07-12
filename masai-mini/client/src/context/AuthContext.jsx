@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import axios from '../axios';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext();
@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     try {
-      const res = await axios.get('/auth/me', {
+      const res = await axios.get('https://mini-project-mme9.onrender.com/api/auth/me', {
         headers: {
           Authorization:token,
         },
@@ -37,7 +37,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     setLoading(true)
     try {
-      const res = await axios.post('/auth/login', { email, password });
+      const res = await axios.post('https://mini-project-mme9.onrender.com/api/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       setUser({ email: res.data.email });
       navigate('/')
@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (email, password) => {
     setLoading(true)
     try {
-      const res = await axios.post('/auth/register', { email, password });
+      const res = await axios.post('https://mini-project-mme9.onrender.com/api/auth/register', { email, password });
     //   localStorage.setItem('token', res.data.token);
     //   setUser({ email: res.data.email });
       navigate('/login')

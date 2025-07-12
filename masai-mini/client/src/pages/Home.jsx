@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import axios from '../axios';
+import axios from 'axios';
 import BookCard from '../components/BookCard';
 import Loader from '../components/Loader';
 
@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const res = await axios.get('/books');
+        const res = await axios.get('https://mini-project-mme9.onrender.com/api/books');
         if (Array.isArray(res.data)) {
             console.log(res.data)
           setBooks(res.data);
