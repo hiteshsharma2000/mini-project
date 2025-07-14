@@ -22,8 +22,8 @@ A simplified Goodreads-like web app built with the MERN stack (MongoDB, Express.
 
 ## 🔗 Project URLs
 
-- 🚀 **Frontend Live**: [https://your-frontend.vercel.app](https://your-frontend.vercel.app)
-- 🔧 **Backend API**: [https://your-backend.onrender.com](https://your-backend.onrender.com)
+- 🚀 **Frontend Live**: [mini-project-tau-ruddy.vercel.app](mini-project-tau-ruddy.vercel.app)
+- 🔧 **Backend API**: [https://mini-project-mme9.onrender.com/](https://mini-project-mme9.onrender.com/)
 
 > ℹ️ Replace with your actual deployment URLs
 
